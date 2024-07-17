@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizapp</title>
+    <!-- As a link -->
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link rel="icon" href="./img/quiz.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
-<body>
-    <h1>Quiz</h1>
+<body onload="init()">
+    
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Quizapp</a>
+        </div>
+    </nav>
+   
+
+    <div class="container" >
+    <div class="card">
+        <img src="./img/background.jpg" class="card-img-top" alt="..."> 
+        <div class="card-body" id="endScreen" style="display:none;">
+            Das Quiz ist beendet!
+            <button onclick="reloadQuiz()">Quiz wiederholen</button>
+        </div>
+        <div class="card-body"id="questionBody">
+          <h5 class="card-title" id="questionText">Frage</h5>
+
+          <div class="card mb-2 quizAnswer"  onclick="answer('answer_1')">
+            <div class="card-body" id="answer_1">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="card mb-2 quizAnswer" onclick="answer('answer_2')">
+            <div class="card-body" id="answer_2">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="card mb-2 quizAnswer" onclick="answer('answer_3')">
+            <div class="card-body" id="answer_3">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="card mb-2 quizAnswer" onclick="answer('answer_4')">
+            <div class="card-body" id="answer_4">
+              This is some text within a card body.
+            </div>
+          </div>
+
+          <div class="question-footer">
+            <span>
+                <b id="currentQuestion">1</b>von <b id="questionsLength">5</b> Fragen
+            </span>
+            <button type="button" class="btn btn-primary" id="nextButton"  disabled  onclick ="nextQuestion()">Nächste Frage</button>
+            <!-- disabled dient dazu, dass es erst angeklickt werden kann, wenn eine Antwort ausgewählt wurde -->
+        </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

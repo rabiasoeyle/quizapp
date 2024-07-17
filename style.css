@@ -1,0 +1,27 @@
+body{
+    margin:0;
+    background-color: rgb(26, 174, 228) !important;
+   
+}
+
+.container{
+    background-color: rgb(26, 174, 228) !important;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.question-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top:16px;
+}
+.quizAnswer:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+}
+.bg-success, .bg-danger{
+    color:white !important;
+}
