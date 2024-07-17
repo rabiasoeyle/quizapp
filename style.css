@@ -25,3 +25,17 @@ body{
 .bg-success, .bg-danger{
     color:white !important;
 }
+.width-100{
+    width:100%;
+}
+.text-align{
+    text-align: center;
+}
+.displayEndCard{
+    display:flex;
+    flex-direction: column;
+}
+.endText{
+    font-size:32px;
+    padding:16px;
+}

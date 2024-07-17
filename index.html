@@ -25,10 +25,16 @@
    
 
     <div class="container" >
+      
+
     <div class="card">
-        <img src="./img/background.jpg" class="card-img-top" alt="..."> 
-        <div class="card-body" id="endScreen" style="display:none;">
-            Das Quiz ist beendet!
+        <img id="headerImage"src="./img/background.jpg" class="card-img-top" alt="..."> 
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div id="percent" class="progress-bar" style="width: 0%">0%</div>
+        </div>
+        <div class="card-body text-align displayEndCard" id="endScreen" style="display:none;">
+            <span class="endText">Das Quiz ist beendet!</span>
+            <span class="width-100">Sie konnten <b id="amountRightAnswers">x</b> Fragen von <b id="questionsLengthEnd">x</b>richtig beantworten!</span>
             <button onclick="reloadQuiz()">Quiz wiederholen</button>
         </div>
         <div class="card-body"id="questionBody">
